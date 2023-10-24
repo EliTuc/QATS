@@ -1,7 +1,7 @@
 import pytest
 import requests
 
-# Base URL for the API
+# Base URL for the API 
 regres_url = "https://reqres.in"
 
 # Endpoint for the users

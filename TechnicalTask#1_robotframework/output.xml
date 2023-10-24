@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20231022 23:51:59.321" rpa="false" schemaversion="4">
+<suite id="s1" name="pythonProject3" source="C:\Users\tuckovae\PycharmProjects\pythonProject3">
+<suite id="s1-s1" name="Task" source="C:\Users\tuckovae\PycharmProjects\pythonProject3\Task">
+<suite id="s1-s1-s1" name="Main" source="C:\Users\tuckovae\PycharmProjects\pythonProject3\Task\Main.robot">
+<test id="s1-s1-s1-t1" name="Main" line="15">
+<kw name="Create and Publish New Post" library="CreatePost">
+<kw name="SeleniumLibrary.Create Webdriver">
+<msg timestamp="20231022 23:51:59.346" level="FAIL">No keyword with name 'SeleniumLibrary.Create Webdriver' found.</msg>
+<status status="FAIL" starttime="20231022 23:51:59.346" endtime="20231022 23:51:59.346"/>
+</kw>
+<kw name="Go To">
+<arg>${URL}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.346" endtime="20231022 23:51:59.346"/>
+</kw>
+<status status="FAIL" starttime="20231022 23:51:59.345" endtime="20231022 23:51:59.346"/>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20231022 23:51:59.347" endtime="20231022 23:51:59.347"/>
+</kw>
+<kw name="Open Browser">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.347" endtime="20231022 23:51:59.347"/>
+</kw>
+<kw name="Click Link">
+<arg>xpath://a[text()='Sign in']</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.348" endtime="20231022 23:51:59.348"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>login</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.349" endtime="20231022 23:51:59.349"/>
+</kw>
+<kw name="Input Text">
+<arg>css:input[type='text']</arg>
+<arg>${USERNAME}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.349" endtime="20231022 23:51:59.349"/>
+</kw>
+<kw name="Input Text">
+<arg>css:input[type='password']</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.350" endtime="20231022 23:51:59.350"/>
+</kw>
+<kw name="Press Keys">
+<arg>css:input[type='password']</arg>
+<arg>\\13</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.350" endtime="20231022 23:51:59.350"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>home</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.351" endtime="20231022 23:51:59.351"/>
+</kw>
+<kw name="Click Link">
+<arg>xpath://a[contains(text(), 'New Post')]</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.351" endtime="20231022 23:51:59.351"/>
+</kw>
+<kw name="Input Text">
+<arg>css:input[placeholder='Article Title']</arg>
+<arg>${POST_TITLE}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.352" endtime="20231022 23:51:59.352"/>
+</kw>
+<kw name="Input Text">
+<arg>css:input[placeholder="What's this article about?"]</arg>
+<arg>${POST_DESCRIPTION}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.352" endtime="20231022 23:51:59.352"/>
+</kw>
+<kw name="Input Text">
+<arg>css:textarea[placeholder='Write your article (in markdown)']</arg>
+<arg>${POST_BODY}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.353" endtime="20231022 23:51:59.353"/>
+</kw>
+<kw name="Input Text">
+<arg>css:input[placeholder='Enter tags']</arg>
+<arg>${POST_TAGS}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.354" endtime="20231022 23:51:59.354"/>
+</kw>
+<kw name="Click Button">
+<arg>xpath://button[contains(text(), 'Publish Article')]</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.354" endtime="20231022 23:51:59.354"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>${POST_TITLE}</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.355" endtime="20231022 23:51:59.355"/>
+</kw>
+<kw name="Click Link">
+<arg>xpath://a[contains(text(), 'Settings')]</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.355" endtime="20231022 23:51:59.355"/>
+</kw>
+<kw name="Click Button">
+<arg>xpath://button[contains(text(), 'Logout')]</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.356" endtime="20231022 23:51:59.356"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>login</arg>
+<status status="NOT RUN" starttime="20231022 23:51:59.357" endtime="20231022 23:51:59.357"/>
+</kw>
+<doc>Hlavni modul na spusteni tasku</doc>
+<status status="FAIL" starttime="20231022 23:51:59.344" endtime="20231022 23:51:59.357">No keyword with name 'SeleniumLibrary.Create Webdriver' found.</status>
+</test>
+<status status="FAIL" starttime="20231022 23:51:59.340" endtime="20231022 23:51:59.357"/>
+</suite>
+<status status="FAIL" starttime="20231022 23:51:59.338" endtime="20231022 23:51:59.357"/>
+</suite>
+<status status="FAIL" starttime="20231022 23:51:59.323" endtime="20231022 23:51:59.358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="pythonProject3">pythonProject3</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Task">pythonProject3.Task</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Main">pythonProject3.Task.Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231022 23:51:59.341" level="ERROR">Error in file 'C:\Users\tuckovae\PycharmProjects\pythonProject3\Task\Main.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\tuckovae\PycharmProjects\pythonProject3
+  C:\Users\tuckovae\PycharmProjects\pythonProject3
+  C:\Users\tuckovae\Python\Python311\python311.zip
+  C:\Users\tuckovae\Python\Python311\DLLs
+  C:\Users\tuckovae\Python\Python311\Lib
+  C:\Users\tuckovae\Python\Python311
+  C:\Users\tuckovae\PycharmProjects\pythonProject3\venv
+  C:\Users\tuckovae\PycharmProjects\pythonProject3\venv\Lib\site-packages</msg>
+<msg timestamp="20231022 23:51:59.343" level="ERROR">Error in file 'C:\Users\tuckovae\PycharmProjects\pythonProject3\Testcases\CreatePost.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\tuckovae\PycharmProjects\pythonProject3
+  C:\Users\tuckovae\PycharmProjects\pythonProject3
+  C:\Users\tuckovae\Python\Python311\python311.zip
+  C:\Users\tuckovae\Python\Python311\DLLs
+  C:\Users\tuckovae\Python\Python311\Lib
+  C:\Users\tuckovae\Python\Python311
+  C:\Users\tuckovae\PycharmProjects\pythonProject3\venv
+  C:\Users\tuckovae\PycharmProjects\pythonProject3\venv\Lib\site-packages</msg>
+<msg timestamp="20231022 23:51:59.344" level="ERROR">Error in file 'C:\Users\tuckovae\PycharmProjects\pythonProject3\Testcases\CreatePost.robot' on line 3: Resource file '..\Resources\Settings.robot' does not exist.</msg>
+</errors>
+</robot>

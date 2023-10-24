@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.3 on win32)" generated="20231024 15:02:44.457" rpa="false" schemaversion="3">
+<suite id="s1" name="Main" source="C:\Users\tuckovae\PycharmProjects\pythonProject3\Task\Main.robot">
+<test id="s1-t1" name="Main" line="13">
+<kw name="Create and Publish New Post" library="CreatePost">
+<arg>${title_text}</arg>
+<kw name="Login" library="CreatePost">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231024 15:02:45.131" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231024 15:02:45.130" endtime="20231024 15:02:49.549"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231024 15:02:49.550" level="INFO">Opening url 'https://react-redux.realworld.io/'</msg>
+<status status="PASS" starttime="20231024 15:02:49.550" endtime="20231024 15:02:50.849"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${vSignin}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231024 15:02:50.849" endtime="20231024 15:02:52.081"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vSignin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:52.082" level="INFO">Clicking element 'xpath://a[text()='Sign in']'.</msg>
+<status status="PASS" starttime="20231024 15:02:52.081" endtime="20231024 15:02:52.210"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vEmail}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:52.211" level="INFO">Typing text 'tech_task@qats.sk' into text field 'xpath://input[@type='email']'.</msg>
+<status status="PASS" starttime="20231024 15:02:52.210" endtime="20231024 15:02:52.496"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vPass}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:52.497" level="INFO">Typing text '124lkjAF89as' into text field 'xpath://input[@type='password']'.</msg>
+<status status="PASS" starttime="20231024 15:02:52.496" endtime="20231024 15:02:52.689"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vSubmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:52.689" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231024 15:02:52.689" endtime="20231024 15:02:52.811"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Sign in succesful</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231024 15:02:52.811" endtime="20231024 15:02:52.812"/>
+</kw>
+<status status="PASS" starttime="20231024 15:02:45.130" endtime="20231024 15:02:52.812"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231024 15:02:55.813" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231024 15:02:52.812" endtime="20231024 15:02:55.813"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${vNewPost}</arg>
+<arg>7</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231024 15:02:55.813" endtime="20231024 15:02:55.864"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${buttonText}</var>
+<arg>${vNewPost}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:55.926" level="INFO">${buttonText} =  New Post</msg>
+<status status="PASS" starttime="20231024 15:02:55.864" endtime="20231024 15:02:55.926"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>buttonText${buttonText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231024 15:02:55.926" endtime="20231024 15:02:55.927"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vNewPost}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:55.928" level="INFO">Clicking element 'xpath:(//li[@class='nav-item'])[2]'.</msg>
+<status status="PASS" starttime="20231024 15:02:55.927" endtime="20231024 15:02:56.027"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vTitle}</arg>
+<arg>${title_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:56.028" level="INFO">Typing text 'krasny_den' into text field 'xpath://input[@placeholder='Article Title']'.</msg>
+<status status="PASS" starttime="20231024 15:02:56.027" endtime="20231024 15:02:56.219"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vDescription}</arg>
+<arg>Popisek</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:56.220" level="INFO">Typing text 'Popisek' into text field 'xpath://input[@class='form-control']'.</msg>
+<status status="PASS" starttime="20231024 15:02:56.219" endtime="20231024 15:02:56.399"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vText}</arg>
+<arg>Text je povinný</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:56.400" level="INFO">Typing text 'Text je povinný' into text field 'xpath://textarea[@class='form-control']'.</msg>
+<status status="PASS" starttime="20231024 15:02:56.399" endtime="20231024 15:02:56.602"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vPublish}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:56.603" level="INFO">Clicking element 'xpath://button[text()='Publish Article']'.</msg>
+<status status="PASS" starttime="20231024 15:02:56.602" endtime="20231024 15:02:56.702"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Element Should Exist</arg>
+<arg>${article_exist}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Exist">
+<arg>${article_exist}</arg>
+<msg timestamp="20231024 15:02:56.710" level="FAIL">No keyword with name 'Element Should Exist' found.</msg>
+<status status="FAIL" starttime="20231024 15:02:56.710" endtime="20231024 15:02:56.710"/>
+</kw>
+<msg timestamp="20231024 15:02:56.711" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20231024 15:02:56.702" endtime="20231024 15:02:56.711"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${status}</arg>
+<arg>Log</arg>
+<arg>Element exists</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>příspěvek nepřidán</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>příspěvek nepřidán</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231024 15:02:56.711" level="INFO">příspěvek nepřidán</msg>
+<status status="PASS" starttime="20231024 15:02:56.711" endtime="20231024 15:02:56.712"/>
+</kw>
+<status status="PASS" starttime="20231024 15:02:56.711" endtime="20231024 15:02:56.712"/>
+</kw>
+<kw name="Logout" library="CreatePost">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vSettings}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:56.713" level="INFO">Clicking element 'xpath://i[@class="ion-gear-a"]'.</msg>
+<status status="PASS" starttime="20231024 15:02:56.712" endtime="20231024 15:02:56.817"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vLogout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:02:56.818" level="INFO">Clicking element 'xpath://button[@class="btn btn-outline-danger"]'.</msg>
+<status status="PASS" starttime="20231024 15:02:56.817" endtime="20231024 15:02:56.934"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Logout Succesful</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231024 15:02:56.935" endtime="20231024 15:02:56.937"/>
+</kw>
+<status status="PASS" starttime="20231024 15:02:56.712" endtime="20231024 15:02:56.938"/>
+</kw>
+<status status="PASS" starttime="20231024 15:02:45.129" endtime="20231024 15:02:56.938"/>
+</kw>
+<kw name="Delete Post" library="DeletePost">
+<arg>${title_text}</arg>
+<kw name="Login" library="CreatePost">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231024 15:02:56.944" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231024 15:02:56.944" endtime="20231024 15:03:00.546"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231024 15:03:00.547" level="INFO">Opening url 'https://react-redux.realworld.io/'</msg>
+<status status="PASS" starttime="20231024 15:03:00.546" endtime="20231024 15:03:00.991"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${vSignin}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231024 15:03:00.991" endtime="20231024 15:03:01.751"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vSignin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:01.752" level="INFO">Clicking element 'xpath://a[text()='Sign in']'.</msg>
+<status status="PASS" starttime="20231024 15:03:01.751" endtime="20231024 15:03:01.925"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vEmail}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:01.926" level="INFO">Typing text 'tech_task@qats.sk' into text field 'xpath://input[@type='email']'.</msg>
+<status status="PASS" starttime="20231024 15:03:01.926" endtime="20231024 15:03:02.201"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vPass}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:02.201" level="INFO">Typing text '124lkjAF89as' into text field 'xpath://input[@type='password']'.</msg>
+<status status="PASS" starttime="20231024 15:03:02.201" endtime="20231024 15:03:02.422"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vSubmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:02.423" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231024 15:03:02.423" endtime="20231024 15:03:02.528"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Sign in succesful</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231024 15:03:02.528" endtime="20231024 15:03:02.529"/>
+</kw>
+<status status="PASS" starttime="20231024 15:02:56.944" endtime="20231024 15:03:02.529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${vGlobal}</arg>
+<arg>2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231024 15:03:02.529" endtime="20231024 15:03:03.370"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vGlobal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:03.371" level="INFO">Clicking element 'xpath://a[text()='Global Feed']'.</msg>
+<status status="PASS" starttime="20231024 15:03:03.370" endtime="20231024 15:03:03.458"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231024 15:03:05.459" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231024 15:03:03.458" endtime="20231024 15:03:05.459"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${title_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231024 15:03:05.487" level="INFO">Current page contains text 'krasny_den'.</msg>
+<status status="PASS" starttime="20231024 15:03:05.459" endtime="20231024 15:03:05.487"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[text()='${title_text}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:05.488" level="INFO">Clicking element 'xpath://*[text()='krasny_den']'.</msg>
+<status status="PASS" starttime="20231024 15:03:05.487" endtime="20231024 15:03:05.611"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${vDeleteArticle}</arg>
+<arg>2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231024 15:03:05.611" endtime="20231024 15:03:06.532"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vDeleteArticle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:06.532" level="INFO">Clicking element 'xpath://button[@class='btn btn-outline-danger btn-sm']'.</msg>
+<status status="PASS" starttime="20231024 15:03:06.532" endtime="20231024 15:03:06.643"/>
+</kw>
+<kw name="Logout" library="CreatePost">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vSettings}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:06.644" level="INFO">Clicking element 'xpath://i[@class="ion-gear-a"]'.</msg>
+<status status="PASS" starttime="20231024 15:03:06.644" endtime="20231024 15:03:06.780"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vLogout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231024 15:03:06.781" level="INFO">Clicking element 'xpath://button[@class="btn btn-outline-danger"]'.</msg>
+<status status="PASS" starttime="20231024 15:03:06.781" endtime="20231024 15:03:06.890"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Logout Succesful</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231024 15:03:06.891" endtime="20231024 15:03:06.891"/>
+</kw>
+<status status="PASS" starttime="20231024 15:03:06.643" endtime="20231024 15:03:06.891"/>
+</kw>
+<status status="PASS" starttime="20231024 15:02:56.943" endtime="20231024 15:03:06.892"/>
+</kw>
+<doc>Hlavni modul na spusteni tasku</doc>
+<status status="PASS" starttime="20231024 15:02:45.127" endtime="20231024 15:03:06.894"/>
+</test>
+<status status="PASS" starttime="20231024 15:02:44.462" endtime="20231024 15:03:06.897"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
